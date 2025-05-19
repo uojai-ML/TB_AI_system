@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest X-ray Analysis</title>
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="Images/Logo.jfif" alt="">
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="main"><h1>Chest X-ray Analysis</h1></div>
+        <button class="button" onclick="goHome()">Home</button>
+
+        <div class="upload-section">
+            <label for="fileUpload">Upload File</label>
+            <input type="file" id="fileUpload" accept="image/*" onchange="previewImage(event)">
+            
+            <div class="image-preview">
+                <img id="preview" src="" alt="This image appears only after choosing file.">
+            </div>
+
+            <button class="process-button" onclick="processImage()">Process Image</button>
+        </div>
+
+        <div class="analysis-result">
+            <h3>Image Analysis:</h3>
+            <p><strong>Class:</strong> <span id="classification">Normal or Tuberculosis</span></p>
+            <p><strong>Certainty:</strong> <span id="certainty">Probability in percentage</span></p>
+        </div>
+    </main>
+
+    <footer>
+        <p id="left-footer">&copy; <span id="year">2025</span> All rights reserved</p>
+        <p id="right-footer">Designed and developed by UOJ</p>
+    </footer>
+
+    <script>
+        // Update footer year dynamically
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function goHome() {
+            window.location.href = "index.html";
+        }
+
+        function previewImage(event) {
+            const preview = document.getElementById('preview');
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function() {
+                    preview.src = reader.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function processImage() {
+            // Simulated AI processing logic
+            const randomProbability = (Math.random() * 100).toFixed(2);
+            const isTuberculosis = randomProbability > 50 ? "Tuberculosis Detected" : "Normal";
+
+            document.getElementById('classification').textContent = isTuberculosis;
+            document.getElementById('certainty').textContent = `${randomProbability}%`;
+        }
+    </script>
+</body>
+</html>

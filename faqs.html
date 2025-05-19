@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="Images/Logo.jfif" alt="">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="main"><h1>Frequently Asked Questions</h1></div>
+        <section class="faqs">
+            <h2>General Questions</h2>
+            <div class="faq-item">
+                <h3>What is this application about?</h3>
+                <p>This application uses AI to analyze chest X-ray images and detect signs of Tuberculosis, helping healthcare professionals make informed decisions.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Who can use this application?</h3>
+                <p>This application is designed for healthcare professionals, researchers, and organizations involved in Tuberculosis detection and treatment.</p>
+            </div>
+        </section>
+        <section class="faqs">
+            <h2>Technical Questions</h2>
+            <div class="faq-item">
+                <h3>What kind of images does the application support?</h3>
+                <p>The application supports chest X-ray images in standard formats such as JPEG and PNG.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How accurate is the AI analysis?</h3>
+                <p>The AI model has been trained on a large dataset and provides high accuracy, but it is intended to assist professionals and not replace medical expertise.</p>
+            </div>
+        </section>
+        <section class="faqs">
+            <h2>Support Questions</h2>
+            <div class="faq-item">
+                <h3>What should I do if I encounter an issue?</h3>
+                <p>If you experience any issues, please contact our support team at <a href="mailto:uojdeeplearning@gmail.com">uojdeeplearning@gmail.com</a>.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is there a cost to use this application?</h3>
+                <p>The application is free to use for non-commercial purposes. For commercial use, please contact us for licensing information.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="left-footer">&copy; <span id="year">2025</span> All rights reserved</p>
+        <p id="right-footer">Designed and developed by UOJ</p>
+    </footer>
+    <script>
+        // Add toggle functionality to FAQ items
+        document.querySelectorAll('.faq-item h3').forEach(header => {
+            header.addEventListener('click', () => {
+                // Close any currently open FAQ item
+                document.querySelectorAll('.faq-item.open').forEach(openItem => {
+                    if (openItem !== header.parentElement) {
+                        openItem.classList.remove('open');
+                    }
+                });
+    
+                // Toggle the clicked FAQ item
+                const faqItem = header.parentElement;
+                faqItem.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
