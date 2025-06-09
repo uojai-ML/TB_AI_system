@@ -8,17 +8,26 @@
 
 body {
     font-family: sans-serif;
-    background-color: #f4f8fb;
+    background-color: #b0cfe8;
     color: #222;
     margin: 0;
     padding: 0;
+     
+    /* box-shadow: 0 0 40px 0 rgba(92, 128, 247, 0.15) inset; */
 }
 
 header {
-    background-color: #849ff7;
+    background-color: #38687d;
     color: #fff;
     padding: 18px 0 4px 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 0;  
 }
 
 header h1 {
@@ -34,10 +43,16 @@ header h1 {
     margin-top: 4px;
 }
 
+body::before {
+    content: '';
+    display: block;
+    height: 50px; /* Space below fixed header, matches section spacing */
+}
+
 main {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 30px 20px;
+    padding: 90px 20px 30px 20px; /* Add top padding for fixed header */
 }
 
 section {
@@ -48,7 +63,7 @@ section {
     padding: 30px 20px;
 }
 
-#problem h1, #solution h1, #architecture h1 {
+#problem h1, #solution h1, #architecture h1, #output h1, #result h1 {
     color: #1a5d57;
     margin-bottom: 20px;
     font-size: 2.2em;
@@ -80,7 +95,7 @@ p {
 }
 
 footer {
-    background: #849ff7;
+    background: #38687d;
     color: #fff;
     text-align: center;
     padding: 8px 0 4px 0;
