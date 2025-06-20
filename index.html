@@ -3,93 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuberculosis Detection System</title>
+    <title>AI-Powered TB Detection System</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-        <header>
-            <h1>AI-Powered TB Detection system</h1>
-            <p class="slogan">Every breath counts</p>
-        </header>
-        <main>
-            <section id="problem">
-                <h1>The Problem</h1>
-                <p>Tuberculosis (TB) is a major public health concern in South Sudan, where access to specialized medical diagnostics is limited, 
-                especially in rural areas. Delayed diagnosis leads to severe health complications and increased transmission. 
-                TB remains one of the world’s deadliest infectious diseases, particularly in low-resource settings. 
-                Diagnosis typically requires expert radiologists and lab tests, which are often unavailable. This leads to delayed treatment and increased transmission risk. 
-                Early, accessible, and accurate detection is critical.
-                    
-                </p> 
-            </section>
-            <section id="solution">
-                <h1>The Solution</h1>
-                <div class="solution-content">
-                    <img src="Images/Chest_image.jpg" alt="Chest X-ray" class="chest-image">
-                    <div class="solution-text">
-                        <h2>AI-powered Tuberculosis Detection System</h2>
-                        <p>
-                            Our application leverages advanced artificial intelligence to analyze chest X-ray images and detect signs of Tuberculosis. The process is simple:
-                        </p>
-                        <ol>
-                            <li>A doctor obtains a chest X-ray image from the patient.</li>
-                            <li>The image is uploaded into the AI model.</li>
-                            <li>Within seconds, the system produces results indicating whether TB is present or not.</li>
-                            <li>The doctor uses the result to make the next clinical decision.</li>
-                        </ol>
-                        <p>This system provides a fast, reliable, and cost-effective solution for TB detection, especially in low-resource settings where access to expert radiologists may be limited.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="architecture">
-                <h1>Model Architecture</h1>
-                <div class="solution-content">
-                    <img src="Images/cnn.png" alt="CNN Architecture" class="chest-image">
-                    <div class="solution-text">
-                        <p>
-                            This is the basic structure of our Convolutional Neural Network (CNN) used for automated tuberculosis (TB) detection from chest X-ray images. 
-                            The pipeline begins with an input X-ray image, which is passed through multiple convolutional layers to extract key features. 
-                            These features are then reduced using pooling layers, which help in lowering dimensionality while preserving important information. 
-                            The resulting feature maps are flattened and fed into dense (fully connected) layers, allowing the model to learn complex patterns and relationships. 
-                            Finally, the model outputs a classification—identifying whether the X-ray image corresponds to a TB-positive or a normal case. 
-                            This architecture enables effective feature extraction and decision-making, making it well-suited for medical image analysis tasks like TB screening.
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section id="output">
-                <h1>Model Performance</h1>
-                <div class="solution-content">
-                    <img src="Images/results.png" alt="Model Results" class="chest-image">
-                    <div class="solution-text">
-                        <p>
-                            The CNN model achieved a high level accuracy in detecting TB from chest X-ray images. On the test dataset, the model achieved an accuracy of 98%.
-                        </p>
-                        <p>
-                            The architecture's layered approach enables the model to extract subtle features from X-ray images, resulting in robust and reliable predictions. 
-                            As shown in the results, the model demonstrates strong performance in distinguishing between TB-positive and normal cases, making it a valuable tool 
-                            for rapid and accessible TB screening. The high accuracy indicates the model's effectiveness and potential for real-world deployment in medical settings.
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section id="results">
-                <h1>Results Summary</h1>
-                <div class="solution-content">
-                    <img src="Images/Matrix.png" alt="Confusion Matrix" class="chest-image" style="max-width: 350px;">
-                    <div class="solution-text">
-                        <p>
-                            The confusion matrix illustrates the model's performance in classifying TB-positive and normal cases. 
-                            The high number of correct predictions (true positives and true negatives) and low number of misclassifications demonstrate the reliability of the system. 
-                            This robust performance, combined with a 98% accuracy rate, highlights the model's suitability for supporting TB screening in clinical environments.
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p id="left-footer">&copy; <span id="year">2025</span> All rights reserved -- Designed and developed by UOJ</p>
-            <p id="right-footer"></p>
-        </footer>
-    </body>
+    <div class="centered-container">
+        <h1 class="main-title">AI-Powered TB Detection System</h1>
+        <div class="ai-day">AI Day 2025</div>
+        <div class="authors">Reeng Kuol | Kuot Chol | Malish Ben | Moses Luwalla | Yousif John</div>
+        <div class="university">University of Juba</div>
+        <div class="github-link">
+            <a href="https://github.com/uojai-ML/TB_AI_system" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                <span class="github-label">Code</span>
+            </a>
+        </div>
+        <div class="section-title">Abstract</div>
+        <div class="abstract">
+            Tuberculosis (TB) continues to be a major global health threat, particularly in low-resource regions like South Sudan where access to expert diagnostics is limited. This project presents an AI-powered system designed to assist healthcare professionals by providing rapid, accurate, and accessible TB screening using chest X-ray images. Leveraging a deep convolutional neural network, the system can analyze medical images and deliver instant predictions, helping to reduce diagnostic delays and improve patient outcomes. With a demonstrated accuracy of 98% on test data, this solution has the potential to transform TB detection in underserved communities, supporting early intervention and better disease management.
+        </div>
+        <div class="section-title">Method</div>
+        <div class="abstract">
+            Our approach utilizes a deep convolutional neural network (CNN) specifically trained for tuberculosis detection from chest X-ray images. The workflow begins with the collection of a diverse dataset of labeled X-ray images, which is preprocessed to enhance image quality and normalize input dimensions. The CNN architecture is designed to extract hierarchical features from the images, enabling the model to distinguish between TB-positive and normal cases. The model is trained using supervised learning, optimizing for high sensitivity and specificity. During deployment, a user uploads a chest X-ray, and the system processes the image, runs it through the trained model, and instantly returns a prediction. This method ensures rapid, reliable, and scalable TB screening, even in settings with limited medical expertise.
+            <img src="Images/cnn.png" alt="CNN Architecture" class="chest-image" style="margin-top:20px;max-width:350px;">
+        </div>
+        <div class="section-title">Results</div>
+        <div class="abstract">
+            The AI-powered TB detection system was evaluated on a held-out test set of chest X-ray images. The model achieved an accuracy of 98%, with high sensitivity and specificity, indicating strong performance in identifying both TB-positive and normal cases. The confusion matrix below demonstrates the model’s ability to minimize false positives and false negatives, making it a reliable tool for clinical screening. These results suggest that the system can effectively support healthcare professionals in early TB detection, potentially reducing disease transmission and improving patient outcomes in resource-limited environments.
+            <div class="results-images-row">
+                <img src="Images/Matrix.png" alt="Confusion Matrix" class="chest-image" style="max-width:350px;">
+                <img src="Images/prediction.png" alt="Prediction Results" class="chest-image" style="max-width:350px;">
+            </div>
+            <div style="margin-top: 18px;">
+                The prediction image on the right shows randomly selected chest X-rays from the test set. Correct predictions are highlighted with green borders, while incorrect predictions are marked with red borders. This visual representation demonstrates the model’s ability to accurately classify most cases, with only a few misclassifications, further supporting its reliability for clinical use.
+            </div>
+        </div>
+        <div class="section-title">References</div>
+        <div class="abstract">
+            1. World Health Organization. Global Tuberculosis Report 2024. <a href="https://www.who.int/teams/global-programme-on-tuberculosis-and-lung-health/tb-reports/global-tuberculosis-report-2024" target="_blank">Link</a><br>
+            2. Tawsifur Rahman, et al. “Tuberculosis (TB) Chest X-ray Dataset.” Kaggle. <a href="https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-dataset" target="_blank">Link</a><br>
+            3. Lakhani, P. & Sundaram, B. (2017). Deep Learning at Chest Radiography: Automated Classification of Pulmonary Tuberculosis by Using Convolutional Neural Networks.<br>
+            4. Tan, M., & Le, Q. V. (2021). EfficientNetV2: Smaller models and faster training.
+In International Conference on Machine Learning (pp. 10096-10106). PMLR.
+
+        </div>
+    </div>
+    <!-- <footer>
+        <p id="left-footer">&copy; <span id="year">2025</span> All rights reserved -- Designed and developed by UOJ</p>
+        <p id="right-footer"></p>
+    </footer> -->
+</body>
 </html>

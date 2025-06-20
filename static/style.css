@@ -8,7 +8,7 @@
 
 body {
     font-family: sans-serif;
-    background-color: #b0cfe8;
+    background-color: #e9f1f8;
     color: #222;
     margin: 0;
     padding: 0;
@@ -55,13 +55,13 @@ main {
     padding: 90px 20px 30px 20px; /* Add top padding for fixed header */
 }
 
-section {
-    margin-bottom: 50px;
-    background: #ddeefc;
+/* section {
+    margin-bottom: 40px;
+    background: #68bbff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     padding: 30px 20px;
-}
+} */
 
 #problem h1, #solution h1, #architecture h1, #output h1, #result h1 {
     color: #1a5d57;
@@ -84,8 +84,10 @@ p {
 }
 
 .chest-image {
-    width: 280px;
-    border-radius: 10px;
+    display: block;
+    margin: 24px auto 24px auto;
+    max-width: 100%;
+    height: auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
@@ -95,7 +97,7 @@ p {
 }
 
 footer {
-    background: #38687d;
+    background: #37aaa0;
     color: #fff;
     text-align: center;
     padding: 8px 0 4px 0;
@@ -104,10 +106,125 @@ footer {
     font-size: 0.95em;
 }
 
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Justify the main content blocks but keep them centered */
+.centered-container .abstract {
+    text-align: justify;
+    max-width: 740px;
+    margin: 0 auto 18px auto;
+    font-size: 1.25em;
+    position: relative;
+}
+.centered-container .section-title, .section-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: 2em;
+    font-weight: bold;
+    color: #1a5d57;
+    margin-top: 28px;
+    margin-bottom: 6px;
+    width: 100%;
+    max-width: 740px;
+    box-sizing: border-box;
+}
+
+.github-link {
+    margin: 16px 0;
+    text-align: center;
+}
+.github-link a {
+    display: inline-block;
+    text-decoration: none;
+}
+.github-link img {
+    width: 48px !important;
+    height: 48px !important;
+    vertical-align: middle;
+}
+.github-link .github-label {
+    display: block;
+    color: #2563eb;
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+.authors, .university {
+    font-weight: bold;
+}
+
+.section-title {
+    margin-top: 32px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.abstract {
+    max-width: 700px;
+    margin: 0 auto 18px auto;
+    font-size: 1.1em;
+}
+
+.centered-container .abstract img {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.centered-container .abstract {
+    overflow: auto;
+}
+
+.main-title, .university {
+    color: #1a5d57;
+}
+.ai-day {
+    color: #2f3cf4;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.authors {
+    color: #251db3;
+    margin-bottom: 4px;
+}
+
 @media (max-width: 800px) {
     .solution-content {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+.results-images-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    .results-images-row {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
